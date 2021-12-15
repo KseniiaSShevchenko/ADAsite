@@ -15,7 +15,7 @@
 <script type="application/ld+json">
 {"@type":"WebSite","headline":"A COMMUNICATION CRISIS ? Inequalities in media representation through quotes","url":"http://localhost:4000/","name":"A COMMUNICATION CRISIS ? Inequalities in media representation through quotes","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="A COMMUNICATION CRISIS ? Inequalities in media representation through quotes" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="A COMMUNICATION CRISIS ? Inequalities in media representation through quotes" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">A COMMUNICATION CRISIS ? Inequalities in media representation through quotes</a><nav class="site-nav">
@@ -43,27 +43,23 @@
 
 <p><em>What is the most represented nationality of speakers?</em></p>
 
-<p><em>What are the characteristics of speakers across topics?</em></p>
-
-<p><em>Does the age, gender and nationality of the speaker change over time?</em></p>
-
 <p>Here you can find answers to all these questions!</p>
 
-<h2 id="data-analysis"><strong>Data analysis</strong></h2>
+<h3 id="what-data-are-we-working-with"><strong>What data are we working with?</strong></h3>
 
-<p>Our analysis will be based on a dataset of quotations from 2015 to 2020 and data on the speakers - age, gender and nationality. 
+<p>Our analysis will be based on QuoteBank Dataset - a dataset of quotations from 2015 to 2020 and WikiDataset, which provides data on the speakers - age, gender and nationality. 
 We will try to analyze the characteristics of the speakers and draw certain conclusions.</p>
 
 <h3 id="topics-in-the-press"><strong>Topics in the press</strong></h3>
 
-<p>We will begin our data story with the analysis of topics. 
+<p>We will begin with the analysis of topics. 
 Quotes in our dataset belong to one of 5 categories - business, entertainment, politics, sports, technology. 
 Which topic is the most discussed and widespread in general and worries people the most?</p>
 
 <p>Take a look at these plots.
 Here in the figures 0 denotes business, 1 - entertainment, 2 - politics, 3 - sport and 4 - tech.</p>
 
-<p><img src="images/distribution_of_label.png" alt="distribution_of_label" /></p>
+<p><img src="/images/distribution_of_label.png" alt="distribution_of_label" /></p>
 
 <p>So, we can say that the most discussed topic is sports and the least discussed is politics. 
 And the ratio of different topics is quite similar by year.</p>
@@ -97,7 +93,7 @@ But topics related to entertainment and politics are much more selective in term
 <hr />
 <h3 id="is-there-any-discrimination-in-the-press-based-on-age-and-gender"><strong>Is there any discrimination in the press based on age and gender?</strong></h3>
 
-<p><img src="images/discrimination.webp" alt="discrimination" /></p>
+<p><img src="/images/discrimination.webp" alt="discrimination" /></p>
 
 <p>Discrimination occurs in all areas of our life. The press was not spared either. Let’s comment on this observation in more detail.</p>
 
@@ -120,6 +116,36 @@ However, the representation of genderqueer peoples remains insignificant.</p>
 
 <p>The press is a powerful tool for controlling a person’s consciousness, and in many ways the press influence what kind of thoughts people will have in their heads. 
 Don’t underestimate the press in the fight against discrimination based on age or gender.</p>
+
+<hr />
+
+<h3 id="which-nationality-prevails-on-different-news-resources-and-which-is-represented-much-less"><strong>Which nationality prevails on different news resources, and which is represented much less?</strong></h3>
+
+<p>Is there any link between the news resource and the nationalities of the speakers represented in it? 
+Undoubtedly, and a very strong and defining dependence.</p>
+
+<p>Take a look at the distribution of the 5 most represented nationalities for 2015 for various topics and the 10 most common websites.
+Here in the figures 0 class denotes business, 1 - entertainment, 2 - politics, 3 - sport and 4 - tech.</p>
+
+<p><img src="/images/nationality_2015_websites.png" alt="nationality_2015_websites" /></p>
+
+<p>Let’s analyze in more detail the distribution for, for example, sports topics.
+There are a lot of representatives of UK on such websites as <em>bbc.co.uk</em>, <em>feeds.theguardian.com</em> and <em>independent.co.uk</em>, on the websites <em>espn.go.com</em> and <em>mlb.mlb.com</em> the main part of speakers are from USA, on <em>au.news.yahoo.com</em> Australia is widely represented.</p>
+
+<p>For other topics and other years, we have similar observations. 
+That is, we can conclude that the most presented nationality is that of the origin of the website.</p>
+
+<hr />
+
+<h3 id="does-the-representation-of-nationality-change-over-time"><strong>Does the representation of nationality change over time?</strong></h3>
+
+<p>Let’s take <em>msn.com</em> website.</p>
+
+<p><img src="/images/msn_nationality_evolution.png" alt="msn_nationality_evolution" /></p>
+
+<p>What changes in the national composition do we observe? 
+For example, the proportion of speakers from India has been declining significantly over the years. 
+Perhaps this can be interpreted as a sign of potential discrimination.</p>
 
 <hr />
 <h3 id="msn-vs-breitbart"><strong>Msn VS Breitbart</strong></h3>
@@ -166,41 +192,32 @@ We will use a frequently used machine learning method - linear regression, based
 <hr />
 <h4 id="age-prediction"><strong>Age prediction</strong></h4>
 
-<p><img src="/images/age_regression_on_business.png" alt="age_regression_on_business" />
-<img src="/images/age_regression_on_entertainment.png" alt="age_regression_on_entertainment" />
-<img src="/images/age_regression_on_politics.png" alt="age_regression_on_politics" />
-<img src="/images/age_regression_on_sport.png" alt="age_regression_on_sport" />
-<img src="/images/age_regression_on_tech.png" alt="age_regression_on_tech" /></p>
+<p><img src="/images/age_regression_on_business.png" alt="age_regression_on_business" /></p>
 
-<p>We can observe that for business and sports topics, both new sources quoted more representatives identified by us as an age minority than the linear regression predicted.</p>
+<p><img src="/images/age_regression_on_tech.png" alt="age_regression_on_tech" /></p>
 
-<p>For the topics of entertainment, politics and technology - the situation is the opposite - our prediction is greater than the real percentage of quotations.</p>
-
-<p>It should also be noted that both news sources turn out to be better or worse than predicted percentage, and while Msn is closer to the prediction, Breitbart deviates more.</p>
+<p>We observed that for business and sports topics, both new sources quoted more representatives identified by us as an age minority than the linear regression predicted.
+For the topics of entertainment, politics and technology - the situation is the opposite - our prediction is greater than the real percentage of quotations.
+It should also be noted that both news sources turn out to be better or worse than predicted percentage, and while Msn is closer to the prediction, Breitbart deviates more.</p>
 
 <hr />
 <h4 id="gender-prediction"><strong>Gender prediction</strong></h4>
 
-<p><img src="/images/gender_regression_on_business.png" alt="gender_regression_on_business" />
-<img src="/images/gender_regression_on_entertainment.png" alt="gender_regression_on_entertainment" />
-<img src="/images/gender_regression_on_politics.png" alt="gender_regression_on_politics" />
-<img src="/images/gender_regression_on_sport.png" alt="gender_regression_on_sport" />
-<img src="/images/gender_regression_on_tech.png" alt="gender_regression_on_tech" /></p>
+<p><img src="/images/gender_regression_on_politics.png" alt="gender_regression_on_politics" /></p>
 
-<p>Here we can observe that in the topics of business, entertainment, sports, politics, Msn quotes significantly more cisgender (?) women than the percentage predicted by linear regression, and Breitbart less.</p>
-
-<p>Only in the topic of technology Breitbart exceeds the predicted percentage and exceeds Msn.</p>
-
-<p>In general, the sexual minority is significantly less represented in Breitbart, which can be explained by its political orientation.</p>
+<p>Here we observed that in the topics of business, entertainment, sports, politics, Msn quotes significantly more cisgender women than the percentage predicted by linear regression, and Breitbart less. 
+Only in the topic of technology Breitbart exceeds the predicted percentage and exceeds Msn. 
+In general, the sexual minority is significantly less represented in Breitbart, which can be explained by its political orientation.</p>
 
 <hr />
 <h4 id="nationality-prediction"><strong>Nationality prediction</strong></h4>
 
-<p><img src="/images/nationality_regression_on_business.png" alt="nationality_regression_on_business" />
-<img src="/images/nationality_regression_on_entertainment.png" alt="nationality_regression_on_entertainment" />
-<img src="/images/nationality_regression_on_politics.png" alt="nationality_regression_on_politics" />
-<img src="/images/nationality_regression_on_sport.png" alt="nationality_regression_on_sport" />
-<img src="/images/nationality_regression_on_tech.png" alt="nationality_regression_on_tech" /></p>
+<p><img src="/images/nationality_regression_on_sport.png" alt="nationality_regression_on_sport" /></p>
+
+<p>Here we found that in the topics of business, sports and technology, Breitbart shows a larger percentage of national minorities, while Msn shows a smaller percentage. 
+For politics, the actual share turns out to be less than predicted for both new sources, and for entertainment topics - more.</p>
+
+<hr />
 
 </div>
 
